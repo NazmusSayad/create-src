@@ -1,0 +1,9 @@
+*
+
+!LICENSE
+!README.md
+!CHANGELOG.md
+!package.json
+
+!dist/**
+dist/lab/**

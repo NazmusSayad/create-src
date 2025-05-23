@@ -1,18 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "outDir": "dist",
+    "target": "ES2020",
     "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
+    "strict": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "tsBuildInfoFile": "node_modules/.tsbuildinfo"
   },
   "include": ["src"],
   "exclude": ["node_modules"]
