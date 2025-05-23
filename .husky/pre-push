@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+echo "🔍 Running lint before push..."
+npm run lint

@@ -1,4 +1,40 @@
 {
   "name": "create-src",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "description": "A simple CLI tool to create a src directory with a advanced structure.",
+  "scripts": {
+    "test": "bun test",
+    "prepare": "husky",
+    "build": "npm run lint && tsc",
+    "lab": "tsx --watch ./lab/index.ts",
+    "start": "tsx --watch ./src/index.ts",
+    "tsc": "tsc --noEmit --watch",
+    "lint": "tsc --noEmit && eslint .",
+    "lint:prettier": "prettier . --write",
+    "lint:fix": "eslint . --fix"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "type": "commonjs",
+  "homepage": "https://github.com/NazmusSayad/create-src#readme",
+  "bugs": {
+    "url": "https://github.com/NazmusSayad/create-src/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NazmusSayad/create-src.git"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.9",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-check-file": "^3.2.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-react": "^7.37.5",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1"
+  }
 }
