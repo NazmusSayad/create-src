@@ -104,18 +104,8 @@ export default [
       ],
 
       'max-lines': [2, { max: 200, skipBlankLines: true, skipComments: true }],
-      'max-lines-per-function': [
-        2,
-        {
-          max: 50,
-        },
-      ],
-      'check-file/folder-naming-convention': [
-        2,
-        {
-          '*/**': 'KEBAB_CASE',
-        },
-      ],
+      'max-lines-per-function': [2, { max: 50 }],
+      'check-file/folder-naming-convention': [2, { '*/**': 'KEBAB_CASE' }],
       'check-file/filename-naming-convention': [
         2,
         { '**/*.*': 'KEBAB_CASE' },
