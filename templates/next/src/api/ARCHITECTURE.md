@@ -17,5 +17,6 @@ api/
 
 ```tsx
 import { apiClient } from '@/api/client'
+import { axiosClient } from '@/api/axios'
 import { fetchUsers } from '@/api/queries/users'
 ```
