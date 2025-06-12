@@ -23,7 +23,12 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ['**/.next', '**/node_modules', './*.{js,mjs,ts,mts}'],
+    ignores: [
+      '**/.next',
+      '**/node_modules',
+      './*.{js,mjs,ts,mts}',
+      './src/components/ui/*.{tsx,jsx}',
+    ],
   },
 
   ...configs.recommended,
