@@ -1,3 +1,3 @@
-export default function Page() {
-  return 'page'
-}
+import Home from '@features/home/home'
+
+export default Home
