@@ -1,13 +1,14 @@
 {
   "scripts": {
     "prepare": "husky",
+    "test": "bun test",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "tsc": "tsc --noEmit --watch",
     "lint": "tsc --noEmit && eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:format": "prettier . --write",
-    "test": "bun test"
+    "lint:format": "prettier . --write"
   },
   "dependencies": {
     "react": "^19.0.0",
