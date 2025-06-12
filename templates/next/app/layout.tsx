@@ -1,4 +1,5 @@
 import '@/styles/index.css'
+import '@/styles/initial.css'
 
 import type { Metadata } from 'next'
 

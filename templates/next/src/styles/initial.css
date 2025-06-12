@@ -1,0 +1,14 @@
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
