@@ -11,6 +11,7 @@
     "lint:format": "prettier . --write"
   },
   "dependencies": {
+    "next": "^15.3.3",
     "react": "^19",
     "react-dom": "^19"
   },
@@ -35,7 +36,6 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
-    "next": "^15.3.3",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.12",
