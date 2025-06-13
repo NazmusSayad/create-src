@@ -6,7 +6,7 @@
     "test": "bun test",
     "prepare": "husky",
     "build": "npm run lint && tsc",
-    "lab": "tsx --watch ./lab/index.ts",
+    "lab": "tsx --watch ./src/__lab__/index.ts",
     "start": "tsx --watch ./src/index.ts",
     "tsc": "tsc --noEmit --watch",
     "lint": "tsc --noEmit && eslint .",
@@ -29,6 +29,8 @@
     "@eslint/compat": "^1.2.9",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.27.0",
+    "@types/jszip": "^3.4.0",
+    "@types/node": "^24.0.1",
     "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-check-file": "^3.2.0",
@@ -43,6 +45,7 @@
     "typescript-eslint": "^8.32.1"
   },
   "dependencies": {
+    "jszip": "^3.10.1",
     "noarg": "^3.1.9"
   }
 }
