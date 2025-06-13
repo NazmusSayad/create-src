@@ -1,6 +1,6 @@
 import { NoArg } from 'noarg'
 
-const app = NoArg.create('create-src', {
+export const app = NoArg.create('create-src', {
   arguments: [
     {
       name: 'template',
@@ -13,5 +13,3 @@ const app = NoArg.create('create-src', {
 app.on(([template]) => {
   console.log(`Selected template: ${template}`)
 })
-
-export default app

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import app from './arg'
+import { app } from './arg'
 
 app.start()
