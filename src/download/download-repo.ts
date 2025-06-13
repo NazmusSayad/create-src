@@ -4,12 +4,17 @@ export async function downloadRepo(
   owner: string,
   repo: string,
   branch: string,
-  onLoading: (loaded: number, total: number | null) => void
+  onLoading: (loaded: number, total: number | null) => void,
+  onComplete?: () => void
 ) {
-  const res = await fetch(`https://github.com/${owner}/${repo}/archive/refs/heads/${branch}.zip`)
+  const res = await fetch(
+    `https://github.com/${owner}/${repo}/archive/refs/heads/${branch}.zip`
+  )
 
   if (!res.ok) {
-    throw new Error(`Failed to download repository: ${res.status} ${res.statusText}`)
+    throw new Error(
+      `Failed to download repository: ${res.status} ${res.statusText}`
+    )
   }
 
   const contentLength = res.headers.get('content-length')
@@ -32,6 +37,8 @@ export async function downloadRepo(
     loadedSize += value.length
     onLoading(loadedSize, totalSize)
   }
+
+  onComplete?.()
 
   const uint8Array = new Uint8Array(loadedSize)
   let offset = 0

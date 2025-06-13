@@ -7,7 +7,7 @@
   "singleAttributePerLine": false,
   "bracketSameLine": false,
   "jsxSingleQuote": false,
-  "printWidth": 100,
+  "printWidth": 80,
   "proseWrap": "preserve",
   "quoteProps": "as-needed",
   "requirePragma": false,
@@ -19,5 +19,5 @@
   "embeddedLanguageFormatting": "auto",
   "experimentalTernaries": false,
 
-  "plugins": ["prettier-plugin-organize-imports" ]
+  "plugins": ["prettier-plugin-organize-imports"]
 }
