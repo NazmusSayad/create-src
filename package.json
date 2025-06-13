@@ -1,6 +1,6 @@
 {
   "name": "create-src",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple CLI tool to create a src directory with a advanced structure.",
   "scripts": {
     "test": "bun test",

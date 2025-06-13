@@ -21,7 +21,8 @@ export async function setupFolder(cwd: string) {
   const existingFiles = fs.readdirSync(cwd)
   if (existingFiles.length > 0) {
     const shouldOverwrite = await confirm({
-      message: 'The folder is not empty. Do you want to overwrite existing files?',
+      message:
+        'The folder is not empty. Do you want to overwrite existing files?',
       default: false,
     })
 
