@@ -8,7 +8,7 @@
     min-height: 100%;
   }
 
-  button {
+  button:not(:disabled) {
     cursor: pointer;
   }
 }
