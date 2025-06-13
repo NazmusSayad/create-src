@@ -2,14 +2,13 @@
   "compilerOptions": {
     "outDir": "dist",
     "target": "ES2020",
-    "module": "esnext",
+    "module": "commonjs",
     "strict": true,
     "incremental": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "resolveJsonModule": true,
-    "moduleResolution": "bundler",
     "lib": ["dom", "dom.iterable", "esnext"],
     "tsBuildInfoFile": "node_modules/.tsbuildinfo"
   },
