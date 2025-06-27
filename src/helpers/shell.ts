@@ -1,24 +1,23 @@
+import { spawn } from 'cross-spawn'
+
 export async function execShellCommand(
   cwd: string,
   ...args: string[]
 ): Promise<void> {
   const [bin, ...binArgs] = args
-  const command = [bin, ...binArgs].join(' ')
-  const { exec } = await import('child_process')
 
-  return new Promise((resolve, reject) => {
-    exec(
-      command,
-      { cwd },
-      (error: Error | null, stdout: string, stderr: string) => {
-        if (error) {
-          reject(error)
-        } else {
-          process.stdout.write(stdout)
-          process.stderr.write(stderr)
-          resolve()
-        }
-      }
-    )
+  await new Promise<void>((resolve, reject) => {
+    const child = spawn(bin, binArgs, {
+      shell: true,
+      stdio: 'inherit',
+      cwd,
+    })
+
+    child.on('close', (code) => {
+      if (code === 0) resolve()
+      else reject(new Error(`Command failed with exit code ${code}`))
+    })
+
+    child.on('error', reject)
   })
 }
