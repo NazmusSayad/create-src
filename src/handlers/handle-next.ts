@@ -42,7 +42,7 @@ async function installShadcnUI(cwd: string) {
 
     console.log(kleur.blue('Adding all shadcn/ui components...'))
 
-    await execShellCommand(cwd, 'npx', 'shadcn@latest', 'add', '--all')
+    await execShellCommand(cwd, 'npx', 'shadcn@latest', 'add', '-a')
 
     console.log(
       kleur.green('✅ shadcn/ui installed successfully with all components!')
