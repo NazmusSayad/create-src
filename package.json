@@ -7,6 +7,7 @@
     "prepare": "husky",
     "build": "npm run lint && tsc",
     "lab": "tsx --watch ./src/lab/index.ts",
+    "dev": "tsc --watch",
     "start": "tsx --watch ./src/bin.ts",
     "tsc": "tsc --noEmit --watch",
     "lint": "tsc --noEmit && eslint .",

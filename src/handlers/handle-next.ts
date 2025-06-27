@@ -1,9 +1,9 @@
 import { confirm } from '@inquirer/prompts'
-import { execa } from 'execa'
 import fs from 'fs'
 import kleur from 'kleur'
 import path from 'path'
 import { getTemplate } from '../download/get-template'
+import { execShellCommand } from '../helpers/shell'
 
 export async function handleNext(cwd: string) {
   const files = await getTemplate('next')
@@ -38,16 +38,11 @@ async function installShadcnUI(cwd: string) {
   console.log(kleur.blue('Installing shadcn/ui...'))
 
   try {
-    await execa('npx', ['shadcn@latest', 'init', '--force'], {
-      cwd,
-      stdio: 'inherit',
-    })
+    await execShellCommand(cwd, 'npx', 'shadcn@latest', 'init', '--force')
 
     console.log(kleur.blue('Adding all shadcn/ui components...'))
-    await execa('npx', ['shadcn@latest', 'add', '--all'], {
-      cwd,
-      stdio: 'inherit',
-    })
+
+    await execShellCommand(cwd, 'npx', 'shadcn@latest', 'add', '--all')
 
     console.log(
       kleur.green('✅ shadcn/ui installed successfully with all components!')

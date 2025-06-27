@@ -1,6 +1,6 @@
-import { execa } from 'execa'
+import { execShellCommand } from '../helpers/shell'
 
 export async function finalizeFolder(cwd: string) {
-  await execa('git', ['init'], { cwd, stdio: 'inherit' })
-  await execa('npm', ['install'], { cwd, stdio: 'inherit' })
+  await execShellCommand(cwd, 'git', 'init')
+  await execShellCommand(cwd, 'npm', 'install')
 }
