@@ -1,29 +1,20 @@
 # Features Directory
 
-Feature-based organization for business logic and UI components.
+Feature-based organization for business logic and UI components, located in `src/features/`.
 
 ## Structure
 
 ```
-features/
+src/features/
 ├── home/                # Home page feature
 │   ├── index.ts         # Public exports
-│   ├── home.tsx         # Main component
-│   ├── components/      # Feature components
-│   ├── hooks/           # Feature hooks
-│   └── types.ts         # Feature types
-└── auth/                # Authentication feature
-    ├── index.ts
-    ├── login.tsx
-    ├── register.tsx
-    └── components/
+│   └── home.tsx         # Main component
 ```
 
 ## Usage
 
 ```tsx
-import { Home } from '@features/home'
-import { LoginForm } from '@features/auth'
+import { Home } from '@/features/home'
 ```
 
 ## Feature Structure Guidelines
@@ -35,19 +26,11 @@ feature-name/
 ├── index.ts                  # Public API exports
 ├── feature-name.tsx          # Main feature component
 ├── components/               # Feature-specific components
-│   ├── component-one.tsx
-│   └── component-two.tsx
 ├── hooks/                    # Feature-specific hooks
-│   ├── use-feature-data.ts
-│   └── use-feature-actions.ts
 ├── utils/                    # Feature-specific utilities
-│   ├── helpers.ts
-│   └── validators.ts
 ├── types.ts                  # Feature-specific TypeScript types
 ├── constants.ts              # Feature-specific constants
 └── api/                      # Feature-specific API calls
-    ├── queries.ts
-    └── mutations.ts
 ```
 
 ## Creating a New Feature
@@ -55,13 +38,13 @@ feature-name/
 1. **Create the feature directory:**
 
    ```bash
-   mkdir features/my-feature
+   mkdir src/features/my-feature
    ```
 
 2. **Create the main component:**
 
    ```tsx
-   // features/my-feature/my-feature.tsx
+   // src/features/my-feature/my-feature.tsx
    export default function MyFeature() {
      return (
        <div>
@@ -74,7 +57,7 @@ feature-name/
 3. **Create the public API:**
 
    ```tsx
-   // features/my-feature/index.ts
+   // src/features/my-feature/index.ts
    export { default as MyFeature } from './my-feature'
    export * from './types'
    export * from './hooks'
@@ -88,7 +71,7 @@ feature-name/
 
 - Keep features as independent as possible
 - Avoid direct imports between features
-- Use shared utilities from `src/lib/` for common functionality
+- Use shared utilities from `@/lib/` for common functionality
 
 ### 2. Public API Pattern
 
@@ -113,14 +96,14 @@ feature-name/
 ### Good - Feature exports through index
 
 ```tsx
-import { UserProfile, useUserData } from '@features/user-profile'
+import { UserProfile, useUserData } from '@/features/user-profile'
 ```
 
 ### Bad - Direct internal imports
 
 ```tsx
-import UserProfile from '@features/user-profile/user-profile'
-import { useUserData } from '@features/user-profile/hooks/use-user-data'
+import UserProfile from '@/features/user-profile/user-profile'
+import { useUserData } from '@/features/user-profile/hooks/use-user-data'
 ```
 
 ## Integration with App Router
@@ -129,7 +112,7 @@ Features integrate seamlessly with Next.js App Router:
 
 ```tsx
 // app/dashboard/page.tsx
-import { Dashboard } from '@features/dashboard'
+import { Dashboard } from '@/features/dashboard'
 
 export default function DashboardPage() {
   return <Dashboard />

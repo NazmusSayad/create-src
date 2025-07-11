@@ -19,12 +19,19 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ['./*.{js,mjs,ts,mts}', '**/node_modules', '**/dist', '**/templates'],
+    ignores: [
+      './*.{js,mjs,ts,mts}',
+      '**/node_modules',
+      '**/dist',
+      '**/templates',
+    ],
   },
 
   ...configs.recommended,
 
-  ...fixupConfigRules(compat.extends('plugin:import/typescript', 'plugin:prettier/recommended')),
+  ...fixupConfigRules(
+    compat.extends('plugin:import/typescript', 'plugin:prettier/recommended')
+  ),
   {
     plugins: {
       'check-file': checkFile,

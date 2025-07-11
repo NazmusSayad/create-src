@@ -1,3 +1,5 @@
-import { Home } from '@features/home'
+import { Home } from '@/features/home'
 
-export default Home
+export default function HomePage() {
+  return <Home />
+}
