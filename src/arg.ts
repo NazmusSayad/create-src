@@ -2,7 +2,6 @@ import kleur from 'kleur'
 import { NoArg } from 'noarg'
 import path from 'path'
 import { handlers } from './handlers'
-import { finalizeFolder } from './handlers/finalize-folder'
 import { setupFolder } from './handlers/setup-folder'
 
 const BASE_DIR = process.cwd()
@@ -45,15 +44,11 @@ app.on(async ([templateName, projectName]) => {
     console.log('')
 
     const handler = handlers[templateName as keyof typeof handlers]
-    if (!handler)
+    if (!handler) {
       throw new Error(`Template "${templateName}" is not supported.`)
+    }
 
     await handler(folder)
-    console.log('')
-
-    await finalizeFolder(folder)
-    console.log('')
-
     console.log(
       kleur.green(`Project created successfully in ${kleur.blue(folder)}!`)
     )
