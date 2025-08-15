@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
-npm run lint:fix
+npx tsc --noEmit
+npx lint-staged --verbose
