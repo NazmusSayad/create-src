@@ -2,7 +2,6 @@ import kleur from 'kleur'
 import { NoArg } from 'noarg'
 import path from 'path'
 import { handlers } from './handlers'
-import { finalizeFolder } from './helpers/finalize-folder'
 import { setupFolder } from './helpers/setup-folder'
 
 const BASE_DIR = process.cwd()
@@ -53,12 +52,6 @@ app.on(async ([templateName, projectName]) => {
     console.log(
       kleur.green(`${kleur.bold(templateName)} project created successfully!`)
     )
-
-    console.log('')
-    console.log('Finalizing your project...')
-
-    await finalizeFolder(folder)
-    console.log(kleur.green('Done!'))
   } catch (err) {
     console.log('')
 

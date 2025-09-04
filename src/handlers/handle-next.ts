@@ -1,33 +1,18 @@
 import { confirm } from '@inquirer/prompts'
-import fs from 'fs'
 import kleur from 'kleur'
-import path from 'path'
-import { getTemplate } from '../download/get-template'
+import { finalizeFolder } from '../helpers/finalize-folder'
+import { writeTemplate } from '../helpers/write-template'
 import { execShellCommand } from '../utils/shell'
 
 export async function handleNext(cwd: string) {
-  const files = await getTemplate('next')
-  if (!files.length) {
-    throw new Error('Failed to download Next.js template files.')
-  }
-
-  for (const file of files) {
-    const filePath = path.join(cwd, file.path)
-    const dir = path.dirname(filePath)
-
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true })
-    }
-
-    const buffer = Buffer.from(await file.blob.arrayBuffer())
-    fs.writeFileSync(filePath, buffer)
-  }
-
-  console.log('')
+  await writeTemplate('next', cwd)
   await installShadcnUI(cwd)
+  await finalizeFolder(cwd)
 }
 
 async function installShadcnUI(cwd: string) {
+  console.log('')
+
   const shouldInstallShadcn = await confirm({
     message: 'Do you want to install shadcn/ui with all components?',
     default: true,
