@@ -1,4 +1,4 @@
-import { execShellCommand } from '../helpers/shell'
+import { execShellCommand } from '../utils/shell'
 
 export async function finalizeFolder(cwd: string) {
   await execShellCommand(cwd, 'git', 'init')

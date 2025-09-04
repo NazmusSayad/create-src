@@ -3,8 +3,8 @@ import fs from 'fs'
 import kleur from 'kleur'
 import path from 'path'
 import { getTemplate } from '../download/get-template'
-import { execShellCommand } from '../helpers/shell'
-import { finalizeFolder } from './finalize-folder'
+import { finalizeFolder } from '../helpers/finalize-folder'
+import { execShellCommand } from '../utils/shell'
 
 export async function handleNext(cwd: string) {
   const files = await getTemplate('next')
