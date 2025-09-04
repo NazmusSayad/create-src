@@ -1,4 +1,6 @@
+husky/_
+
 dist
 node_modules
 
-husky/_
+/templates/**/package-lock.json

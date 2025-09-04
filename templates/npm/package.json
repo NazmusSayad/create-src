@@ -1,14 +1,11 @@
 {
-  "name": "create-src-npm-vite",
+  "name": "npmize",
   "version": "0.0.0",
-  "types": "./build/index.d.ts",
-  "main": "./build/index.cjs.js",
-  "module": "./build/index.es.js",
   "scripts": {
-    "dev": "vite",
-    "preview": "vite preview",
-    "build": "vite build --config vite.build.js",
     "prepare": "husky",
+    "dev": "npmize dev",
+    "build": "npmize build",
+    "start": "tsx --watch ./src/index.ts",
     "test": "bun test",
     "test:watch": "bun test --watch",
     "tc": "tsc --noEmit --watch",
@@ -16,11 +13,15 @@
     "lint:fix": "eslint . --fix",
     "lint:format": "prettier . --write"
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
   "devDependencies": {
+    "npmize": "^1.1.11",
+    "typescript": "^5.9.2",
     "@eslint/compat": "^1.3.2",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.34.0",
-    "@microsoft/api-extractor": "^7.52.11",
     "@types/bun": "^1.2.21",
     "@types/node": "^24.3.0",
     "eslint": "^9.34.0",
@@ -32,9 +33,6 @@
     "prettier": "^3.6.2",
     "prettier-plugin-organize-imports": "^4.2.0",
     "tsx": "^4.20.5",
-    "typescript": "^5.9.2",
-    "typescript-eslint": "^8.42.0",
-    "unplugin-dts": "^1.0.0-beta.6",
-    "vite": "^7.1.2"
+    "typescript-eslint": "^8.42.0"
   }
 }

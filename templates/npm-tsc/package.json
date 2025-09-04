@@ -1,14 +1,13 @@
 {
-  "name": "create-src-npm-vite",
+  "name": "create-src-npm-tsc",
   "version": "0.0.0",
-  "types": "./build/index.d.ts",
-  "main": "./build/index.cjs.js",
-  "module": "./build/index.es.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "vite",
-    "preview": "vite preview",
-    "build": "vite build --config vite.build.js",
     "prepare": "husky",
+    "dev": "tsc --watch",
+    "build": "tsc --noEmit false",
+    "start": "tsx --watch ./src/index.ts",
     "test": "bun test",
     "test:watch": "bun test --watch",
     "tc": "tsc --noEmit --watch",
@@ -20,7 +19,6 @@
     "@eslint/compat": "^1.3.2",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.34.0",
-    "@microsoft/api-extractor": "^7.52.11",
     "@types/bun": "^1.2.21",
     "@types/node": "^24.3.0",
     "eslint": "^9.34.0",
@@ -33,8 +31,6 @@
     "prettier-plugin-organize-imports": "^4.2.0",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.42.0",
-    "unplugin-dts": "^1.0.0-beta.6",
-    "vite": "^7.1.2"
+    "typescript-eslint": "^8.42.0"
   }
 }
