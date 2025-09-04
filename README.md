@@ -1,14 +1,15 @@
 # create-src
 
-A simple CLI tool to create a project with an advanced, scalable structure. Supports Next.js templates with feature-based architecture and shadcn/ui integration.
+A powerful CLI tool to create projects with advanced, scalable structures. Supports multiple templates including Next.js web applications and various npm package configurations.
 
 ## Features
 
 - Interactive CLI for project scaffolding
-- Next.js template with feature-based structure
-- Optional shadcn/ui installation
+- Multiple template options for different project types
+- Feature-based architecture for web applications
+- Comprehensive build configurations
 - Automatic git initialization and dependency installation
-- Designed for extensibility (Vite support coming soon)
+- Modern tooling with TypeScript, ESLint, and Prettier
 
 ## Installation
 
@@ -27,75 +28,65 @@ npx create-src
 Run the CLI and follow the prompts:
 
 ```bash
-create-src
+create-src <template> <project-name>
 ```
 
 You will be prompted for:
 
-- **Template**: The project template to use (currently: `next`)
+- **Template**: The project template to use
 - **Project Name**: The name of your new project (folder will be created)
 
-Example:
+## Available Templates
 
-```bash
-create-src
-```
+### 🌐 `next` - Next.js Web Application
 
-```
-? Please enter the template name: next
-? Please enter the project name: my-app
-? Are you sure you want to continue with the folder setup? (Y/n)
-? The folder is not empty. Do you want to overwrite existing files? (y/N)
-? Do you want to install shadcn/ui with all components? (Y/n)
-```
+Full-stack web apps, React websites with:
 
-## Templates
+- Next.js 15 + React 19 + TypeScript
+- Feature-based architecture + shadcn/ui
+- Tailwind CSS + SCSS support
 
-### Next.js (`next`)
+✅ Production-ready, scalable, modern tooling
 
-- Feature-based directory structure (`src/features/`)
-- Pre-configured with TypeScript, ESLint, Prettier, Tailwind CSS
-- Optional shadcn/ui integration (all components)
+⚠️ Larger bundle, requires React knowledge
 
-### Vite (`vite`)
+---
 
-- _Coming soon_: Not yet supported
+### 📦 `npm` - Basic NPM Package
 
-## What Happens
+Overall, good for small-medium size packages with:
 
-- Downloads the selected template from the repository
-- Sets up the project folder (with overwrite confirmation)
-- Initializes git and installs dependencies
-- Optionally installs shadcn/ui (for Next.js)
+- Advanced TypeScript based package
+- Uses npmize behind the scenes
 
-## Example Project Structure
+✅ Lightweight, quick setup, fast builds, CommonJS and ESM support
 
-```
-my-app/
-├── app/
-├── src/
-│   ├── features/
-│   ├── components/
-│   ├── lib/
-│   ├── hooks/
-│   ├── types/
-│   ├── styles/
-│   ├── layouts/
-│   └── utils/
-└── public/
-```
+⚠️ Limited configuration, basic tooling
 
-See [`src/ARCHITECTURE.md`](./templates/next/src/ARCHITECTURE.md) for more details on the feature-based structure.
+---
 
-## Requirements
+### 🔧 `npm-tsc` - TypeScript Compiler Package
 
-- Node.js 18+
-- Internet connection (downloads templates from GitHub)
+Perfect for simple cli packages with:
 
-## Contributing
+- Pure TypeScript compiler (tsc)
+- Watch mode + type checking
 
-Contributions are welcome! Please open issues or pull requests on [GitHub](https://github.com/NazmusSayad/create-src).
+✅ Reliable builds, standard tooling
 
-## License
+⚠️ Slower builds, no optimization, module support limited
 
-MIT
+---
+
+### ⚡ `npm-vite` - Vite Bundled Package
+
+Modern packages, multiple output formats. Perfect for web libraries with:
+
+- Vite bundling + multiple formats (CJS/ESM/UMD/etc)
+- Tree shaking + optimization
+
+✅ Fast builds, modern bundling, excellent DX
+
+⚠️ Complex config, larger output
+
+---
