@@ -1,0 +1,7 @@
+*
+!build/**
+!README.md
+!package.json
+
+__test__
+__tests__
