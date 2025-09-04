@@ -3,7 +3,6 @@ import fs from 'fs'
 import kleur from 'kleur'
 import path from 'path'
 import { getTemplate } from '../download/get-template'
-import { finalizeFolder } from '../helpers/finalize-folder'
 import { execShellCommand } from '../utils/shell'
 
 export async function handleNext(cwd: string) {
@@ -26,11 +25,6 @@ export async function handleNext(cwd: string) {
 
   console.log('')
   await installShadcnUI(cwd)
-
-  console.log(
-    kleur.green(`Next.js project created successfully in ${kleur.blue(cwd)}!`)
-  )
-  await finalizeFolder(cwd)
 }
 
 async function installShadcnUI(cwd: string) {
