@@ -49,9 +49,6 @@ app.on(async ([templateName, projectName]) => {
     }
 
     await handler(folder)
-    console.log(
-      kleur.green(`${kleur.bold(templateName)} project created successfully!`)
-    )
   } catch (err) {
     console.log('')
 
