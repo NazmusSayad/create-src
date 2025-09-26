@@ -5,7 +5,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "tsc": "tsc --noEmit --watch",
+    "tc": "tsc --noEmit --watch",
     "lint": "tsc --noEmit && eslint .",
     "lint:fix": "eslint . --fix",
     "lint:format": "prettier . --write"

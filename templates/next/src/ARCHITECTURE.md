@@ -11,7 +11,6 @@ src/
 ├── hooks/               # Shared React hooks
 ├── types/               # TypeScript definitions
 ├── styles/              # Global styles
-├── layouts/             # Page layouts
 └── utils/               # Pure utility functions
 ```
 

@@ -1,11 +1,11 @@
-# Backend Directory
+# Server Directory
 
 Server-side utilities and database logic.
 
 ## Structure
 
 ```
-backend/
+server/
 ├── database/            # Database connection
 ├── auth/                # Authentication logic
 ├── middleware/          # Server middleware
@@ -17,7 +17,7 @@ backend/
 ## Usage
 
 ```tsx
-import { createUser } from '@/backend/services/user'
-import { validateUser } from '@/backend/validators/user'
-import { authMiddleware } from '@/backend/middleware/auth'
+import { createUser } from '@/server/services/user'
+import { validateUser } from '@/server/validators/user'
+import { authMiddleware } from '@/server/middleware/auth'
 ```

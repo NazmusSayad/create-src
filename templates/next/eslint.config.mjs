@@ -156,18 +156,23 @@ export default [
       'no-restricted-syntax': [
         'error',
         {
-          selector: "ImportDeclaration[source.value='react'] > ImportDefaultSpecifier",
-          message: 'Please remove `import React from "react"`, it is not needed.',
+          selector:
+            "ImportDeclaration[source.value='react'] > ImportDefaultSpecifier",
+          message:
+            'Please remove `import React from "react"`, it is not needed.',
         },
       ],
     },
   },
 
   {
-    files: ['./app/**'],
+    files: ['./src/app/**'],
     rules: {
       'import/no-default-export': 0,
-      'check-file/folder-naming-convention': [2, { '**/*': 'NEXT_JS_APP_ROUTER_CASE' }],
+      'check-file/folder-naming-convention': [
+        2,
+        { '**/*': 'NEXT_JS_APP_ROUTER_CASE' },
+      ],
     },
   },
 

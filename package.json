@@ -8,7 +8,7 @@
     "dev": "tsc --watch",
     "build": "npm run lint && tsc",
     "start": "tsx --watch ./src/bin.ts",
-    "tsc": "tsc --noEmit --watch",
+    "tc": "tsc --noEmit --watch",
     "lint": "tsc --noEmit && eslint .",
     "lint:format": "prettier . --write",
     "lint:fix": "eslint . --fix"

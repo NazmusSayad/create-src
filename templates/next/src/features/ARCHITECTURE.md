@@ -127,7 +127,6 @@ For code shared across features, use the `src/` directory:
 - **`src/hooks/`** - Shared custom hooks
 - **`src/lib/`** - Shared utilities and configurations
 - **`src/contexts/`** - Global state and contexts
-- **`src/layouts/`** - Layout components
 - **`src/utils/`** - General utility functions
 
 ## Migration Strategy

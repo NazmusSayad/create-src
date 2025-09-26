@@ -5,15 +5,14 @@ Next.js template with feature-based architecture.
 ## Structure
 
 ```
-├── app/                 # Next.js App Router (pages, layouts)
 ├── src/                 # Source code root
+│   ├── app/             # Next.js App Router (pages, layouts)
 │   ├── features/        # Feature modules (business logic)
 │   ├── components/      # Reusable UI components
 │   ├── lib/             # Shared utilities and config
 │   ├── hooks/           # Shared React hooks
 │   ├── types/           # TypeScript definitions
 │   ├── styles/          # Global styles
-│   ├── layouts/         # Page layouts
 │   └── utils/           # Pure utility functions
 └── public/              # Static assets
 ```

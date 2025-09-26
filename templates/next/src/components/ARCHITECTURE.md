@@ -10,6 +10,10 @@ components/
 │   ├── button.tsx
 │   ├── input.tsx
 │   └── card.tsx
+└── layout/              # Layout components
+    ├── header.tsx
+    ├── wrapper.tsx
+    └── root-layout.tsx
 └── common/              # Common components
     ├── loading.tsx
     └── error-boundary.tsx
