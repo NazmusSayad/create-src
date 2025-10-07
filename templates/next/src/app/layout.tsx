@@ -1,6 +1,5 @@
 import '@/styles/index.css'
-import '@/styles/initial.css'
-import '@/styles/theme.scss'
+import '@/styles/theme.css'
 
 import type { Metadata } from 'next'
 
