@@ -4,7 +4,7 @@ import path from 'path'
 import { handlers } from './handlers'
 import { setupFolder } from './helpers/setup-folder'
 
-const BASE_DIR = process.cwd()
+const BASE_DIR = path.join(process.cwd(), 'my-project')
 
 export const app = NoArg.create('create-src', {
   arguments: [
