@@ -1,16 +1,11 @@
 @import 'tailwindcss';
-@import 'tw-animate-css';
 
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
   }
 
-  html,
-  body {
-    min-height: 100%;
-  }
-
+  a[href],
   button:not(:disabled) {
     cursor: pointer;
   }
