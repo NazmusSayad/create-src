@@ -6,7 +6,7 @@ import importPlugin from 'eslint-plugin-import'
 import prettier from 'eslint-plugin-prettier'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { configs, parser } from 'typescript-eslint'
+import { configs } from 'typescript-eslint'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -19,7 +19,7 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ['./*.{js,mjs,ts,mts}', '**/node_modules', '**/dist'],
+    ignores: ['./*.{js,mjs,ts,mts}', '**/node_modules', '**/build', '**/dist'],
   },
 
   ...configs.recommended,
@@ -35,13 +35,9 @@ export default [
     },
 
     languageOptions: {
-      parser: parser,
-      ecmaVersion: 5,
-      sourceType: 'module',
-
       parserOptions: {
-        project: 'tsconfig.json',
-        ecmaFeatures: { jsx: true },
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
 
@@ -105,18 +101,23 @@ export default [
         },
       ],
 
+      'max-lines': [2, { max: 200, skipBlankLines: true, skipComments: true }],
+      'max-lines-per-function': [2, { max: 50 }],
       'check-file/folder-naming-convention': [2, { '*/**': 'KEBAB_CASE' }],
       'check-file/filename-naming-convention': [
         2,
         { '**/*.*': 'KEBAB_CASE' },
         { ignoreMiddleExtensions: true },
       ],
+
+      'import/no-default-export': 2,
     },
   },
 
   {
     files: ['**/*.test.ts'],
     rules: {
+      'max-lines': 0,
       '@typescript-eslint/no-unsafe-call': 0,
       '@typescript-eslint/no-unsafe-assignment': 0,
       '@typescript-eslint/no-unsafe-member-access': 0,
