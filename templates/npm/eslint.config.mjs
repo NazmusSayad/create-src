@@ -6,7 +6,7 @@ import importPlugin from 'eslint-plugin-import'
 import prettier from 'eslint-plugin-prettier'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { configs, parser } from 'typescript-eslint'
+import { configs } from 'typescript-eslint'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -35,13 +35,9 @@ export default [
     },
 
     languageOptions: {
-      parser: parser,
-      ecmaVersion: 5,
-      sourceType: 'module',
-
       parserOptions: {
-        project: 'tsconfig.json',
-        ecmaFeatures: { jsx: true },
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
 
