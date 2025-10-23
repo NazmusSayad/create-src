@@ -5,22 +5,23 @@ import packageJSON from './package.json' with { type: 'json' }
 import _tsDownConfig from './tsdown.config.ts'
 
 const tsDownConfig = _tsDownConfig as Options
-const pkgJSON = structuredClone(packageJSON) as any
 const outDir = tsDownConfig.outDir ?? './dist'
+const pkgJSON = structuredClone(packageJSON) as any
 
-Object.entries(tsDownConfig.entry ?? {}).forEach(([key, value]) => {
+pkgJSON.exports = {}
+pkgJSON.typesVersions = {}
+
+Object.keys(tsDownConfig.entry ?? {}).forEach((key) => {
   if (key === 'index') {
     pkgJSON.main = `${outDir}/${key}.cjs`
     pkgJSON.module = `${outDir}/${key}.mjs`
   }
 
-  pkgJSON.exports ??= {}
   pkgJSON.exports[key === 'index' ? '.' : `./${key}`] = {
     import: `${outDir}/${key}.mjs`,
     require: `${outDir}/${key}.cjs`,
   }
 
-  pkgJSON.typesVersions ??= {}
   pkgJSON.typesVersions['*'] ??= {}
   pkgJSON.typesVersions['*'][key === 'index' ? '.' : key] = [
     `${outDir}/${key}.d.mts`,
