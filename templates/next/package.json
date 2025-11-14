@@ -52,10 +52,5 @@
   "overrides": {
     "react": "*",
     "react-dom": "*"
-  },
-  "lint-staged": {
-    "*": [
-      "eslint --fix --max-warnings 5"
-    ]
   }
 }
