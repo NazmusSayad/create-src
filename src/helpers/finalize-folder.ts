@@ -9,24 +9,24 @@ export async function finalizeFolder(cwd: string) {
     message: 'Pick your favorite package manager?',
     choices: [
       {
-        name: 'pnpm',
+        name: 'Pnpm',
         value: 'pnpm',
         description:
           'pnpm is a fast, disk space efficient package manager for JavaScript.',
       },
       {
-        name: 'npm',
+        name: 'Npm',
         value: 'npm',
         description: 'npm is the default package manager for Node.js.',
       },
       {
-        name: 'yarn',
+        name: 'Yarn',
         value: 'yarn',
         description:
           'yarn is a fast, reliable, and secure package manager for JavaScript.',
       },
       {
-        name: 'bun',
+        name: 'Bun',
         value: 'bun',
         description:
           'bun is a fast, modern, and secure package manager for JavaScript.',

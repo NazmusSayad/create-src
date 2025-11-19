@@ -1,10 +1,10 @@
 {
   "scripts": {
+    "dev": "next dev,",
+    "start": "next start",
+    "build": "next build",
     "prepare": "husky",
     "test": "bun test",
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
     "tc": "tsc --noEmit --watch",
     "lint": "tsc --noEmit && eslint .",
     "lint:fix": "eslint . --fix",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "class-variance-authority": "latest",
-    "clsx": "^latest",
+    "clsx": "latest",
     "lucide-react": "latest",
     "next": "latest",
     "next-themes": "latest",
