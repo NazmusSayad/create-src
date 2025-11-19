@@ -6,7 +6,6 @@ import _import from 'eslint-plugin-import'
 import jsxA11Y from 'eslint-plugin-jsx-a11y'
 import prettier from 'eslint-plugin-prettier'
 import react from 'eslint-plugin-react'
-import reactFunc from 'eslint-plugin-react-func'
 import reactHooks from 'eslint-plugin-react-hooks'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -48,7 +47,6 @@ export default [
       import: fixupPluginRules(_import),
       'jsx-a11y': fixupPluginRules(jsxA11Y),
       react: fixupPluginRules(react),
-      'react-func': reactFunc,
       'react-hooks': fixupPluginRules(reactHooks),
       'check-file': checkFile,
       prettier: fixupPluginRules(prettier),
@@ -139,11 +137,7 @@ export default [
         },
       ],
 
-      'max-lines': [2, { max: 200, skipBlankLines: true, skipComments: true }],
-      'react-func/max-lines-per-function': [
-        2,
-        { max: 30, skipBlankLines: true, skipComments: true },
-      ],
+      'max-lines': [2, { max: 300, skipBlankLines: true, skipComments: true }],
 
       'check-file/folder-naming-convention': [2, { '*/**': 'KEBAB_CASE' }],
       'check-file/filename-naming-convention': [
@@ -187,7 +181,6 @@ export default [
       'import/no-extraneous-dependencies': 0,
       '@typescript-eslint/no-require-imports': 0,
       'import/no-anonymous-default-export': 0,
-      'react-func/max-lines-per-function': 0,
     },
   },
 ]
