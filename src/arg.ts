@@ -4,7 +4,8 @@ import path from 'path'
 import { handlers } from './handlers'
 import { setupFolder } from './helpers/setup-folder'
 
-const BASE_DIR = path.join(process.cwd(), 'my-project')
+const BASE_DIR = process.cwd()
+const DEFAULT_PROJECT_NAME = 'my-project'
 
 export const app = NoArg.create('create-src', {
   arguments: [
@@ -20,7 +21,7 @@ export const app = NoArg.create('create-src', {
       name: 'Project Name',
       description: 'The name of the project.',
       type: NoArg.string()
-        .default(BASE_DIR)
+        .default(DEFAULT_PROJECT_NAME)
         .ask('Please enter the project name:'),
     },
   ],
@@ -29,7 +30,7 @@ export const app = NoArg.create('create-src', {
 app.on(async ([templateName, projectName]) => {
   console.log('')
 
-  const folder = path.resolve(BASE_DIR, projectName)
+  const folder = path.resolve(BASE_DIR, projectName || DEFAULT_PROJECT_NAME)
 
   console.log(
     kleur.bold(
