@@ -22,7 +22,6 @@
   },
   "devDependencies": {
     "@eslint/compat": "latest",
-    "@eslint/eslintrc": "latest",
     "@eslint/js": "latest",
     "@tailwindcss/postcss": "latest",
     "@types/bun": "latest",
