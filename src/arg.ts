@@ -14,7 +14,7 @@ export const app = NoArg.create('create-src', {
       description: 'The template to use for creating the source code.',
       type: NoArg.string(
         ...(Object.keys(handlers) as Array<keyof typeof handlers>)
-      ).ask('Please enter the template name:'),
+      ).ask('Pick to use:'),
     },
 
     {
@@ -22,16 +22,15 @@ export const app = NoArg.create('create-src', {
       description: 'The name of the project.',
       type: NoArg.string()
         .default(DEFAULT_PROJECT_NAME)
-        .ask('Please enter the project name:'),
+        .ask('Enter the project name:'),
     },
   ],
 })
 
 app.on(async ([templateName, projectName]) => {
-  console.log('')
-
   const folder = path.resolve(BASE_DIR, projectName || DEFAULT_PROJECT_NAME)
 
+  console.log('')
   console.log(
     kleur.bold(
       kleur.yellow(
@@ -49,14 +48,10 @@ app.on(async ([templateName, projectName]) => {
       throw new Error(`Template "${templateName}" is not supported.`)
     }
 
-    await handler(folder)
-  } catch (err) {
+    console.log(kleur.bold(kleur.yellow(`Using ${handler.name} template...`)))
+    await handler.handler(folder)
+  } catch {
     console.log('')
-
-    if (err instanceof Error) {
-      console.error(kleur.red(`Error: ${err.message}`))
-    } else {
-      console.error(kleur.red('An unexpected error occurred'))
-    }
+    console.error(kleur.red('An unexpected error occurred'))
   }
 })

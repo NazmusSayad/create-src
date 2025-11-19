@@ -38,7 +38,6 @@
     "eslint-plugin-jsx-a11y": "latest",
     "eslint-plugin-prettier": "latest",
     "eslint-plugin-react": "latest",
-    "eslint-plugin-react-func": "latest",
     "eslint-plugin-react-hooks": "latest",
     "husky": "latest",
     "lint-staged": "latest",

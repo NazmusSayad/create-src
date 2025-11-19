@@ -4,16 +4,42 @@ import { handleNpmTsc } from './handle-npm-tsc'
 import { handleNpmVite } from './handle-npm-vite'
 import { handleNpmize } from './handle-npmize'
 
-export const handlers = {
-  next: handleNext,
+type HandlerType = Record<
+  string,
+  {
+    name: string
+    handler: (cwd: string) => Promise<void>
+  }
+>
 
-  vite: async (cwd: string) => {
-    console.log('cwd:', cwd)
-    console.log('Vite is not supported yet.')
+export const handlers: HandlerType = {
+  next: {
+    name: 'Next.js',
+    handler: handleNext,
   },
 
-  npm: handleNpm,
-  npmize: handleNpmize,
-  'npm-tsc': handleNpmTsc,
-  'npm-vite': handleNpmVite,
-} as const
+  vite: {
+    name: 'Vite',
+    handler: async (cwd: string) => {
+      console.log('cwd:', cwd)
+      console.log('Vite is not supported yet.')
+    },
+  },
+
+  npm: {
+    name: 'npm',
+    handler: handleNpm,
+  },
+  npmize: {
+    name: 'npmize',
+    handler: handleNpmize,
+  },
+  'npm-tsc': {
+    name: 'npm-tsc',
+    handler: handleNpmTsc,
+  },
+  'npm-vite': {
+    name: 'npm-vite',
+    handler: handleNpmVite,
+  },
+}
