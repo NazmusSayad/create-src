@@ -69,11 +69,11 @@ export default defineConfig([
       '@typescript-eslint/no-unused-vars': [
         1,
         {
-          argsIgnorePattern: '^_+',
+          argsIgnorePattern: '^__?',
           caughtErrors: 'all',
-          caughtErrorsIgnorePattern: '^_+',
-          destructuredArrayIgnorePattern: '^_+',
-          varsIgnorePattern: '^_+',
+          caughtErrorsIgnorePattern: '^__?',
+          destructuredArrayIgnorePattern: '^__?',
+          varsIgnorePattern: '^__?',
           ignoreRestSiblings: true,
         },
       ],
