@@ -32,38 +32,42 @@ export default defineConfig([
     rules: {
       'no-void': 0,
       'no-empty': 0,
-      'arrow-body-style': 0,
       'no-empty-pattern': 0,
       'no-useless-escape': 0,
       'no-case-declarations': 0,
 
-      'prettier/prettier': 1,
+      'no-eval': 2,
+      'no-alert': 2,
+      'no-unreachable': 2,
       'no-param-reassign': 2,
+      'no-empty-function': 2,
+      'no-useless-rename': 2,
+      'no-useless-return': 2,
+      'no-empty-static-block': 2,
+
+      'max-lines': [2, { max: 500, skipComments: true, skipBlankLines: true }],
+      '@typescript-eslint/max-params': [2, { max: 5, countVoidThis: false }],
+
+      'arrow-body-style': 0,
+      'prettier/prettier': 1,
       'prefer-arrow-callback': [2, { allowNamedFunctions: false }],
       'func-style': [2, 'declaration', { allowArrowFunctions: false }],
-
-      'max-lines': [
-        2,
-        {
-          max: 300,
-          skipComments: true,
-          skipBlankLines: true,
-        },
-      ],
 
       'import/named': 0,
       'import/no-default-export': 2,
 
       'react/prop-types': 0,
+      'react/react-in-jsx-scope': 0,
+      'react/no-danger-with-children': 1,
+
       'react-hooks/refs': 0,
       'react-hooks/purity': 0,
-      'react/react-in-jsx-scope': 0,
       'react-hooks/set-state-in-effect': 0,
       'react-hooks/incompatible-library': 0,
+
       'jsx-a11y/click-events-have-key-events': 0,
       'jsx-a11y/label-has-associated-control': 0,
       'jsx-a11y/no-static-element-interactions': 0,
-      'react/no-danger-with-children': 1,
 
       '@typescript-eslint/no-floating-promises': 2,
       '@typescript-eslint/no-unused-vars': [
