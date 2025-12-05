@@ -1,6 +1,6 @@
 {
   "name": "create-src",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A simple CLI tool to create a project with a advanced structure.",
   "scripts": {
     "test": "bun test",

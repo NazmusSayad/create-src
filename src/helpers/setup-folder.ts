@@ -38,8 +38,16 @@ export async function setupFolder(cwd: string) {
       )
     )
 
-    existingFiles.forEach((file) => {
-      fs.rmSync(path.join(cwd, file), { recursive: true, force: true })
+    existingFiles.forEach((content) => {
+      const filePath = path.join(cwd, content)
+
+      if (fs.statSync(filePath).isDirectory() && content === '.git') {
+        return console.log(
+          kleur.dim(`Skipping ${kleur.blue(content)} directory...`)
+        )
+      }
+
+      fs.rmSync(filePath, { recursive: true, force: true })
     })
   }
 }
