@@ -1,8 +1,6 @@
 import { handleNext } from './handle-next'
-import { handleNpm } from './handle-npm'
-import { handleNpmTsc } from './handle-npm-tsc'
+import { handleNpmTSDown } from './handle-npm-tsdown'
 import { handleNpmVite } from './handle-npm-vite'
-import { handleNpmize } from './handle-npmize'
 
 type HandlerType = Record<
   string,
@@ -27,19 +25,12 @@ export const handlers: HandlerType = {
   },
 
   npm: {
-    name: 'npm',
-    handler: handleNpm,
+    name: 'NPM TSDown',
+    handler: handleNpmTSDown,
   },
-  npmize: {
-    name: 'npmize',
-    handler: handleNpmize,
-  },
-  'npm-tsc': {
-    name: 'npm-tsc',
-    handler: handleNpmTsc,
-  },
+
   'npm-vite': {
-    name: 'npm-vite',
+    name: 'NPM Vite',
     handler: handleNpmVite,
   },
 }

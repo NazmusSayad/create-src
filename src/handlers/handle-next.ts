@@ -1,6 +1,7 @@
 import { confirm } from '@inquirer/prompts'
 import kleur from 'kleur'
 import { finalizeFolder } from '../helpers/finalize-folder'
+import { getPackageManager } from '../helpers/pm'
 import { writeTemplate } from '../helpers/write-template'
 import { execShellCommand } from '../utils/shell'
 
@@ -20,14 +21,20 @@ async function installShadcnUI(cwd: string) {
 
   if (!shouldInstallShadcn) return
 
-  console.log(kleur.blue('Installing shadcn/ui...'))
-
   try {
-    await execShellCommand(cwd, 'npx', 'shadcn@latest', 'init', '--force')
+    const pm = await getPackageManager()
+
+    console.log(kleur.blue('Installing shadcn/ui...'))
+    await execShellCommand(
+      cwd,
+      ...pm.execute,
+      'shadcn@latest',
+      'init',
+      '--force'
+    )
 
     console.log(kleur.blue('Adding all shadcn/ui components...'))
-
-    await execShellCommand(cwd, 'npx', 'shadcn@latest', 'add', '-a')
+    await execShellCommand(cwd, ...pm.install, 'shadcn@latest', 'add', '-a')
 
     console.log(
       kleur.green('✅ shadcn/ui installed successfully with all components!')
