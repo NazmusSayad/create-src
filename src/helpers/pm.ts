@@ -14,7 +14,7 @@ const PACKAGE_MANAGERS: PackageManager[] = [
   },
   {
     name: 'pnpm',
-    install: ['pnpm', 'dlx'],
+    install: ['pnpm', 'add'],
     execute: ['pnpm', 'dlx'],
   },
   {
@@ -24,12 +24,12 @@ const PACKAGE_MANAGERS: PackageManager[] = [
   },
   {
     name: 'bun',
-    install: ['bun', 'x'],
+    install: ['bun', 'add'],
     execute: ['bun', 'x'],
   },
   {
     name: 'yarn',
-    install: ['yarn', 'dlx'],
+    install: ['yarn', 'add'],
     execute: ['yarn', 'dlx'],
   },
 ]
