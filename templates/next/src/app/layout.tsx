@@ -1,5 +1,4 @@
 import '@/styles/index.css'
-import '@/styles/theme.css'
 
 import { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'

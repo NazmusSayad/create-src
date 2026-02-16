@@ -39,6 +39,7 @@
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
     "husky": "latest",
+    "jiti": "latest",
     "lint-staged": "latest",
     "prettier": "latest",
     "prettier-plugin-organize-imports": "latest",
