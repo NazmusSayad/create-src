@@ -2,34 +2,42 @@ import { select } from '@inquirer/prompts'
 
 export type PackageManager = {
   name: string
+  add: string[]
   install: string[]
   execute: string[]
+  needDoubleDash?: boolean
 }
 
 const PACKAGE_MANAGERS: PackageManager[] = [
   {
+    name: 'npm',
+    add: ['npm', 'install'],
+    install: ['npm', 'install'],
+    execute: ['npm', 'exec'],
+    needDoubleDash: true,
+  },
+  {
+    name: 'pnpm',
+    add: ['pnpm', 'add'],
+    install: ['pnpm', 'install'],
+    execute: ['pnpm', 'dlx'],
+  },
+  {
     name: 'antfu/ni',
+    add: ['ni'],
     install: ['ni'],
     execute: ['nlx'],
   },
   {
-    name: 'pnpm',
-    install: ['pnpm', 'add'],
-    execute: ['pnpm', 'dlx'],
-  },
-  {
-    name: 'npm',
-    install: ['npm', 'install'],
-    execute: ['npm', 'exec'],
-  },
-  {
     name: 'bun',
-    install: ['bun', 'add'],
+    add: ['bun', 'add'],
+    install: ['bun', 'install'],
     execute: ['bun', 'x'],
   },
   {
     name: 'yarn',
-    install: ['yarn', 'add'],
+    add: ['yarn', 'add'],
+    install: ['yarn', 'install'],
     execute: ['yarn', 'dlx'],
   },
 ]

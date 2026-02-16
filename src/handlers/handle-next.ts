@@ -30,11 +30,19 @@ async function installShadcnUI(cwd: string) {
       ...pm.execute,
       'shadcn@latest',
       'init',
+      ...(pm.needDoubleDash ? ['--'] : []),
       '--force'
     )
 
     console.log(kleur.blue('Adding all shadcn/ui components...'))
-    await execShellCommand(cwd, ...pm.install, 'shadcn@latest', 'add', '-a')
+    await execShellCommand(
+      cwd,
+      ...pm.add,
+      'shadcn@latest',
+      'add',
+      ...(pm.needDoubleDash ? ['--'] : []),
+      '-a'
+    )
 
     console.log(
       kleur.green('✅ shadcn/ui installed successfully with all components!')

@@ -9,7 +9,14 @@ export async function finalizeFolder(cwd: string) {
 
   const pm = await getPackageManager()
   await execShellCommand(cwd, ...pm.install)
-  await execShellCommand(cwd, ...pm.execute, 'eslint', '--fix', '.')
+  await execShellCommand(
+    cwd,
+    ...pm.execute,
+    'eslint',
+    ...(pm.needDoubleDash ? ['--'] : []),
+    '--fix',
+    '.'
+  )
 
   console.log(kleur.green('Done!'))
 }
