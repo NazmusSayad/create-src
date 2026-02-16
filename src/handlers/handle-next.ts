@@ -24,6 +24,9 @@ async function installShadcnUI(cwd: string) {
   try {
     const pm = await getPackageManager()
 
+    console.log(kleur.blue('Installing dependencies...'))
+    await execShellCommand(cwd, ...pm.install)
+
     console.log(kleur.blue('Installing shadcn/ui...'))
     await execShellCommand(
       cwd,
@@ -37,11 +40,11 @@ async function installShadcnUI(cwd: string) {
     console.log(kleur.blue('Adding all shadcn/ui components...'))
     await execShellCommand(
       cwd,
-      ...pm.add,
+      ...pm.execute,
       'shadcn@latest',
       'add',
       ...(pm.needDoubleDash ? ['--'] : []),
-      '-a'
+      '--all'
     )
 
     console.log(
