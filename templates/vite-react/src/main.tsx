@@ -1,7 +1,7 @@
 import '@/styles/index.css'
 
-import { Home } from './features/home'
 import { createRoot } from 'react-dom/client'
+import { Home } from './features/home'
 
 const root = document.getElementById('root')
 if (!root) {
