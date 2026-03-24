@@ -36,6 +36,7 @@
     "eslint-plugin-prettier": "^5",
     "eslint-plugin-react": "^7",
     "eslint-plugin-react-hooks": "^7",
+    "eslint-import-resolver-typescript": "^4",
     "husky": "^9",
     "jiti": "^2",
     "lint-staged": "^16",
