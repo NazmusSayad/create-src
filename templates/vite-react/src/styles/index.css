@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a[href],
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
