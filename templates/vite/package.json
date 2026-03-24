@@ -23,11 +23,13 @@
   "devDependencies": {
     "@eslint/compat": "^2",
     "@eslint/js": "^9",
+    "@rolldown/plugin-babel": "^0.2.2",
     "@tailwindcss/postcss": "^4",
     "@types/eslint-plugin-jsx-a11y": "^6",
     "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react-swc": "^4.3.0",
     "eslint": "^9",
     "eslint-config-next": "^16",
     "eslint-config-prettier": "^10",
@@ -45,7 +47,8 @@
     "prettier-plugin-tailwindcss": "^0",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "typescript-eslint": "^8"
+    "typescript-eslint": "^8",
+    "vite": "^8.0.2"
   },
   "overrides": {
     "react": "*",
