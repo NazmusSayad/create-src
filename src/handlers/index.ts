@@ -1,6 +1,7 @@
 import { handleNext } from './handle-next'
 import { handleNpmTSDown } from './handle-npm-tsdown'
 import { handleNpmVite } from './handle-npm-vite'
+import { handleViteReact } from './handle-vite-react'
 
 type HandlerType = Record<
   string,
@@ -17,11 +18,8 @@ export const handlers: HandlerType = {
   },
 
   vite: {
-    name: 'Vite',
-    handler: async (cwd: string) => {
-      console.log('cwd:', cwd)
-      console.log('Vite is not supported yet.')
-    },
+    name: 'Vite (React)',
+    handler: handleViteReact,
   },
 
   npm: {
