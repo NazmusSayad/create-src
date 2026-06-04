@@ -1,10 +1,9 @@
 import { spawnSync } from 'node:child_process'
 import fs from 'node:fs'
-import { Options } from 'tsdown'
 import packageJSON from './package.json' with { type: 'json' }
 import _tsDownConfig from './tsdown.config.ts'
 
-const tsDownConfig = _tsDownConfig as Options
+const tsDownConfig = _tsDownConfig as any
 const outDir = tsDownConfig.outDir ?? './dist'
 const pkgJSON = structuredClone(packageJSON) as any
 
