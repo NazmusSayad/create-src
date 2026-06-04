@@ -17,13 +17,13 @@ export default defineConfig({
   target: 'ES6',
   minify: 'dce-only',
 
-  external: [
-    /node:/gim,
-    /node_modules/gim,
-    ...getExternal((packageJSON as any).dependencies),
-    ...getExternal((packageJSON as any).devDependencies),
-    ...getExternal((packageJSON as any).peerDependencies),
-  ],
+  deps: {
+    neverBundle: [
+      /node:/gim,
+      ...getExternal((packageJSON as any).devDependencies),
+      ...getExternal((packageJSON as any).peerDependencies),
+    ],
+  },
 
   outputOptions(options, format) {
     const ext = format === 'cjs' ? 'cjs' : format === 'es' ? 'mjs' : 'js'
