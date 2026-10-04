@@ -1,7 +1,7 @@
-import { confirm } from '@inquirer/prompts'
 import fs from 'fs'
-import kleur from 'kleur'
 import path from 'path'
+import { confirm } from '@inquirer/prompts'
+import kleur from 'kleur'
 
 export async function setupFolder(cwd: string) {
   const shouldContinue = await confirm({
