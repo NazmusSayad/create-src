@@ -17,14 +17,6 @@ export async function finalizeFolder(cwd: string) {
     '--fix',
     '.'
   )
-  await execShellCommand(
-    cwd,
-    ...pm.execute,
-    'oxfmt',
-    ...(pm.needDoubleDash ? ['--'] : []),
-    '--write',
-    '.'
-  )
 
   console.log(kleur.green('Done!'))
 }
