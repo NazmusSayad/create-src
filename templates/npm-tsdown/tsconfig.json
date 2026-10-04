@@ -8,7 +8,7 @@
     "jsxImportSource": "react",
     "strict": true,
     "noEmit": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "paths": { "@/*": ["./src/*"] }

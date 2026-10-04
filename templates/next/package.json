@@ -6,9 +6,8 @@
     "build": "next build",
     "prepare": "husky",
     "tc": "tsc --noEmit --watch",
-    "lint": "tsc --noEmit && eslint .",
-    "lint:fix": "eslint . --fix",
-    "lint:format": "prettier . --write"
+    "lint": "tsc --noEmit && oxlint .",
+    "lint:fix": "oxlint . --fix"
   },
   "dependencies": {
     "class-variance-authority": "^0",
@@ -21,31 +20,22 @@
     "tailwind-merge": "^3"
   },
   "devDependencies": {
-    "@eslint/compat": "^2",
-    "@eslint/js": "^9",
     "@tailwindcss/postcss": "^4",
-    "@types/eslint-plugin-jsx-a11y": "^6",
     "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "^16",
-    "eslint-config-prettier": "^10",
+    "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-check-file": "^3",
     "eslint-plugin-import": "^2",
-    "eslint-plugin-jsx-a11y": "^6",
-    "eslint-plugin-prettier": "^5",
+    "eslint-plugin-oxfmt": "^0.25.0",
     "eslint-plugin-react": "^7",
-    "eslint-plugin-react-hooks": "^7",
     "husky": "^9",
-    "jiti": "^2",
-    "lint-staged": "^16",
-    "prettier": "^3",
-    "prettier-plugin-organize-imports": "^4",
-    "prettier-plugin-tailwindcss": "^0",
+    "lint-staged": "^17.6.0",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0",
+    "oxlint-tsgolint": "^7.0.2003",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "typescript-eslint": "^8"
+    "typescript": "^5"
   },
   "overrides": {
     "react": "*",

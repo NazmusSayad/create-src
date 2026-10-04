@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "sideEffects": false,
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
     "typecheck": "tsc --noEmit",
     "typecheck:watch": "tsc --noEmit --watch",
     "exports": "tsx ./write-exports.ts",
@@ -29,25 +29,18 @@
     }
   },
   "devDependencies": {
-    "@eslint/compat": "^1",
-    "@eslint/eslintrc": "^3",
-    "@eslint/js": "^9",
     "@types/node": "^25",
-    "@typescript-eslint/eslint-plugin": "^8",
-    "@typescript-eslint/parser": "^8",
     "concurrently": "^10",
-    "eslint": "^9",
-    "eslint-config-prettier": "^10",
     "eslint-plugin-check-file": "^3",
-    "eslint-plugin-import": "^2",
-    "eslint-plugin-prettier": "^5",
+    "eslint-plugin-oxfmt": "^0.25.0",
     "husky": "^9",
-    "prettier": "^3",
-    "prettier-plugin-organize-imports": "^4",
+    "lint-staged": "^17.6.0",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0",
+    "oxlint-tsgolint": "^7.0.2003",
     "tsdown": "^0",
     "tslib": "^2",
     "tsx": "^4",
-    "typescript": "^5",
-    "typescript-eslint": "^8"
+    "typescript": "^5"
   }
 }

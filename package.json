@@ -9,9 +9,8 @@
     "build": "npm run lint && tsc",
     "start": "tsx --watch ./src/bin.ts",
     "tc": "tsc --noEmit --watch",
-    "lint": "tsc --noEmit && eslint .",
-    "lint:format": "prettier . --write",
-    "lint:fix": "eslint . --fix"
+    "lint": "tsc --noEmit && oxlint ./src",
+    "lint:fix": "oxlint ./src --fix"
   },
   "bin": "./dist/bin.js",
   "license": "MIT",
@@ -33,22 +32,16 @@
     "noarg": "^3.1.9"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.4.1",
-    "@eslint/eslintrc": "^3.3.3",
-    "@eslint/js": "^9.39.2",
     "@types/cross-spawn": "^6.0.6",
     "@types/jszip": "^3.4.1",
     "@types/node": "^24.10.13",
-    "eslint": "^9.39.2",
-    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-check-file": "^3.3.1",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-oxfmt": "^0.25.0",
     "husky": "^9.1.7",
-    "prettier": "^3.8.1",
-    "prettier-plugin-organize-imports": "^4.3.0",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0",
+    "oxlint-tsgolint": "^7.0.2003",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.0"
+    "typescript": "^5.9.3"
   }
 }
