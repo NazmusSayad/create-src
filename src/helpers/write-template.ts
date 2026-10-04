@@ -1,6 +1,6 @@
 import fs from 'fs'
-import kleur from 'kleur'
 import path from 'path'
+import kleur from 'kleur'
 import { getTemplate } from '../download/get-template'
 import { handlers } from '../handlers'
 

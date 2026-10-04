@@ -12,7 +12,7 @@ export async function finalizeFolder(cwd: string) {
   await execShellCommand(
     cwd,
     ...pm.execute,
-    'eslint',
+    'oxlint',
     ...(pm.needDoubleDash ? ['--'] : []),
     '--fix',
     '.'

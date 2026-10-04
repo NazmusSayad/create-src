@@ -9,7 +9,7 @@ A powerful CLI tool to create projects with advanced, scalable structures. Suppo
 - Feature-based architecture for web applications
 - Comprehensive build configurations
 - Automatic git initialization and dependency installation
-- Modern tooling with TypeScript, ESLint, and Prettier
+- Modern tooling with TypeScript, Oxlint, and Oxfmt
 
 ## Installation
 

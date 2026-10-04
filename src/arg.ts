@@ -1,6 +1,6 @@
+import path from 'path'
 import kleur from 'kleur'
 import { NoArg } from 'noarg'
-import path from 'path'
 import { handlers } from './handlers'
 import { setupFolder } from './helpers/setup-folder'
 

@@ -8,7 +8,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
 
     /* Bundler mode */
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
