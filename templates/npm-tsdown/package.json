@@ -39,6 +39,6 @@
     "tsdown": "^0",
     "tslib": "^2",
     "tsx": "^4",
-    "typescript": "^5"
+    "typescript": "^7"
   }
 }

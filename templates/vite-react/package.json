@@ -34,7 +34,7 @@
     "oxlint": "^1.86.0",
     "oxlint-tsgolint": "^7.0.2003",
     "tailwindcss": "^4",
-    "typescript": "^5",
+    "typescript": "^7",
     "vite": "^8"
   },
   "overrides": {
