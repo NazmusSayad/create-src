@@ -5,15 +5,13 @@
   "main": "./build/index.cjs.js",
   "module": "./build/index.es.js",
   "scripts": {
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "test": "bun test",
     "dev": "vite",
     "preview": "vite preview",
     "build": "vite build --config vite.build.js",
-    "prepare": "husky",
-    "test": "bun test",
-    "test:watch": "bun test --watch",
-    "tc": "tsc --noEmit --watch",
-    "lint": "oxlint .",
-    "lint:fix": "oxlint . --fix"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.52.11",

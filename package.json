@@ -3,14 +3,13 @@
   "version": "1.0.19",
   "description": "A simple CLI tool to create a project with a advanced structure.",
   "scripts": {
+    "lint": "oxlint ./src",
+    "lint:fix": "oxlint ./src --fix",
     "test": "bun test",
     "prepare": "husky",
     "dev": "tsc --watch",
     "build": "npm run lint && tsc",
-    "start": "tsx --watch ./src/bin.ts",
-    "tc": "tsc --noEmit --watch",
-    "lint": "tsc --noEmit && oxlint ./src",
-    "lint:fix": "oxlint ./src --fix"
+    "start": "tsx --watch ./src/bin.ts"
   },
   "bin": "./dist/bin.js",
   "license": "MIT",

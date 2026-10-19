@@ -1,13 +1,11 @@
 {
-  "private": true,
   "scripts": {
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "prepare": "husky",
-    "tc": "tsc --noEmit --watch",
-    "lint": "tsc --noEmit && oxlint .",
-    "lint:fix": "oxlint . --fix"
+    "prepare": "husky"
   },
   "dependencies": {
     "class-variance-authority": "^0",
