@@ -1,0 +1,278 @@
+{
+  "plugins": [
+    "unicorn",
+    "typescript",
+    "oxc",
+    "import"
+  ],
+  "jsPlugins": [
+    "eslint-plugin-oxfmt",
+    "eslint-plugin-check-file"
+  ],
+  "categories": {},
+  "rules": {
+    "constructor-super": "deny",
+    "for-direction": "deny",
+    "getter-return": "deny",
+    "no-array-constructor": "deny",
+    "no-async-promise-executor": "deny",
+    "no-case-declarations": "deny",
+    "no-class-assign": "deny",
+    "no-compare-neg-zero": "deny",
+    "no-cond-assign": "deny",
+    "no-const-assign": "deny",
+    "no-constant-binary-expression": "deny",
+    "no-constant-condition": "deny",
+    "no-control-regex": "deny",
+    "no-debugger": "deny",
+    "no-delete-var": "deny",
+    "no-dupe-class-members": "deny",
+    "no-dupe-else-if": "deny",
+    "no-dupe-keys": "deny",
+    "no-duplicate-case": "deny",
+    "no-empty": "deny",
+    "no-empty-character-class": "deny",
+    "no-empty-pattern": "deny",
+    "no-empty-static-block": "deny",
+    "no-ex-assign": "deny",
+    "no-extra-boolean-cast": "deny",
+    "no-fallthrough": "deny",
+    "no-func-assign": "deny",
+    "no-global-assign": "deny",
+    "no-import-assign": "deny",
+    "no-invalid-regexp": "deny",
+    "no-irregular-whitespace": "deny",
+    "no-loss-of-precision": "deny",
+    "no-misleading-character-class": "deny",
+    "no-new-native-nonconstructor": "deny",
+    "no-nonoctal-decimal-escape": "deny",
+    "no-obj-calls": "deny",
+    "no-prototype-builtins": "deny",
+    "no-redeclare": "deny",
+    "no-regex-spaces": "deny",
+    "no-self-assign": "deny",
+    "no-setter-return": "deny",
+    "no-shadow-restricted-names": "deny",
+    "no-sparse-arrays": "deny",
+    "no-this-before-super": "deny",
+    "no-undef": "deny",
+    "no-unreachable": "deny",
+    "no-unsafe-finally": "deny",
+    "no-unsafe-negation": "deny",
+    "no-unsafe-optional-chaining": "deny",
+    "no-unused-expressions": "deny",
+    "no-unused-labels": "deny",
+    "no-unused-private-class-members": "deny",
+    "no-unused-vars": "deny",
+    "no-useless-backreference": "deny",
+    "no-useless-catch": "deny",
+    "no-useless-escape": "deny",
+    "no-with": "deny",
+    "require-yield": "deny",
+    "use-isnan": "deny",
+    "valid-typeof": "deny",
+    "typescript/ban-ts-comment": "deny",
+    "typescript/no-duplicate-enum-values": "deny",
+    "typescript/no-empty-object-type": "deny",
+    "typescript/no-explicit-any": "deny",
+    "typescript/no-extra-non-null-assertion": "deny",
+    "typescript/no-misused-new": "deny",
+    "typescript/no-namespace": "deny",
+    "typescript/no-non-null-asserted-optional-chain": "deny",
+    "typescript/no-require-imports": "deny",
+    "typescript/no-this-alias": "deny",
+    "typescript/no-unnecessary-type-constraint": "deny",
+    "typescript/no-unsafe-declaration-merging": "deny",
+    "typescript/no-unsafe-function-type": "deny",
+    "typescript/no-wrapper-object-types": "deny",
+    "typescript/prefer-as-const": "deny",
+    "typescript/prefer-namespace-keyword": "deny",
+    "typescript/triple-slash-reference": "deny"
+  },
+  "settings": {
+    "jsx-a11y": {
+      "polymorphicPropName": null,
+      "components": {},
+      "attributes": {}
+    },
+    "next": {
+      "rootDir": []
+    },
+    "react": {
+      "formComponents": [],
+      "linkComponents": [],
+      "version": null,
+      "componentWrapperFunctions": []
+    },
+    "jsdoc": {
+      "ignorePrivate": false,
+      "ignoreInternal": false,
+      "ignoreReplacesDocs": true,
+      "overrideReplacesDocs": true,
+      "augmentsExtendsReplacesDocs": false,
+      "implementsReplacesDocs": false,
+      "exemptDestructuredRootsFromChecks": false,
+      "tagNamePreference": {}
+    },
+    "vitest": {
+      "typecheck": false
+    },
+    "jest": {
+      "version": null
+    }
+  },
+  "env": {
+    "builtin": true
+  },
+  "globals": {},
+  "overrides": [
+    {
+      "files": [
+        "**/*.{mts,cts}"
+      ],
+      "env": null,
+      "globals": null,
+      "plugins": null,
+      "rules": {
+        "constructor-super": "allow",
+        "getter-return": "allow",
+        "no-array-constructor": "allow",
+        "no-class-assign": "allow",
+        "no-const-assign": "allow",
+        "no-dupe-class-members": "allow",
+        "no-dupe-keys": "allow",
+        "no-func-assign": "allow",
+        "no-import-assign": "allow",
+        "no-new-native-nonconstructor": "allow",
+        "no-obj-calls": "allow",
+        "no-redeclare": "allow",
+        "no-setter-return": "allow",
+        "no-this-before-super": "allow",
+        "no-undef": "allow",
+        "no-unreachable": "allow",
+        "no-unsafe-negation": "allow",
+        "no-unused-expressions": "allow",
+        "no-var": "deny",
+        "no-with": "allow",
+        "prefer-const": "deny",
+        "prefer-rest-params": "deny",
+        "prefer-spread": "deny"
+      }
+    },
+    {
+      "files": [
+        "**/*.{ts,tsx}"
+      ],
+      "env": null,
+      "globals": null,
+      "plugins": null,
+      "rules": {
+        "constructor-super": "allow",
+        "getter-return": "allow",
+        "no-array-constructor": "allow",
+        "no-class-assign": "allow",
+        "no-const-assign": "allow",
+        "no-dupe-class-members": "allow",
+        "no-dupe-keys": "allow",
+        "no-func-assign": "allow",
+        "no-import-assign": "allow",
+        "no-new-native-nonconstructor": "allow",
+        "no-obj-calls": "allow",
+        "no-redeclare": "allow",
+        "no-setter-return": "allow",
+        "no-this-before-super": "allow",
+        "no-undef": "allow",
+        "no-unreachable": "allow",
+        "no-unsafe-negation": "allow",
+        "no-unused-expressions": "allow",
+        "no-var": "deny",
+        "no-with": "allow",
+        "prefer-const": "deny",
+        "prefer-rest-params": "deny",
+        "prefer-spread": "deny",
+        "import/prefer-default-export": "allow",
+        "no-underscore-dangle": "allow",
+        "no-plusplus": "allow",
+        "no-useless-escape": "allow",
+        "typescript/explicit-module-boundary-types": "allow",
+        "no-void": "allow",
+        "symbol-description": "allow",
+        "typescript/consistent-return": "allow",
+        "no-unused-vars": [
+          "warn",
+          [
+            {
+              "argsIgnorePattern": "^_",
+              "caughtErrors": "all",
+              "caughtErrorsIgnorePattern": "^_",
+              "destructuredArrayIgnorePattern": "^_",
+              "varsIgnorePattern": "^_",
+              "ignoreRestSiblings": true
+            }
+          ]
+        ],
+        "no-param-reassign": "deny",
+        "typescript/no-floating-promises": "deny",
+        "prefer-arrow-callback": [
+          "deny",
+          [
+            {
+              "allowNamedFunctions": false
+            }
+          ]
+        ],
+        "func-style": [
+          "deny",
+          [
+            "declaration",
+            {
+              "allowArrowFunctions": false
+            }
+          ]
+        ],
+        "check-file/folder-naming-convention": [
+          "deny",
+          [
+            {
+              "*/**": "KEBAB_CASE"
+            }
+          ]
+        ],
+        "check-file/filename-naming-convention": [
+          "deny",
+          [
+            {
+              "**/*.*": "KEBAB_CASE"
+            },
+            {
+              "ignoreMiddleExtensions": true
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "files": [
+        "**/*.test.ts"
+      ],
+      "env": null,
+      "globals": null,
+      "plugins": null,
+      "rules": {
+        "typescript/no-unsafe-call": "allow",
+        "typescript/no-unsafe-assignment": "allow",
+        "typescript/no-unsafe-member-access": "allow",
+        "typescript/no-require-imports": "allow",
+        "import/no-anonymous-default-export": "allow"
+      }
+    }
+  ],
+  "options": {
+    "typeAware": true
+  },
+  "ignorePatterns": [
+    "/*.{js,mjs,ts,mts}",
+    "**/node_modules",
+    "**/dist"
+  ]
+}
