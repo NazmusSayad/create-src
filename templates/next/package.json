@@ -1,13 +1,11 @@
 {
-  "private": true,
   "scripts": {
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "prepare": "husky",
-    "tc": "tsc --noEmit --watch",
-    "lint": "tsc --noEmit && oxlint .",
-    "lint:fix": "oxlint . --fix"
+    "prepare": "husky"
   },
   "dependencies": {
     "class-variance-authority": "^0",
@@ -35,7 +33,7 @@
     "oxlint": "^1.86.0",
     "oxlint-tsgolint": "^7.0.2003",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^7"
   },
   "overrides": {
     "react": "*",

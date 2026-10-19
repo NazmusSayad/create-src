@@ -5,20 +5,18 @@
   "main": "./build/index.cjs.js",
   "module": "./build/index.es.js",
   "scripts": {
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "test": "vitest run",
     "dev": "vite",
     "preview": "vite preview",
     "build": "vite build --config vite.build.js",
-    "prepare": "husky",
-    "test": "bun test",
-    "test:watch": "bun test --watch",
-    "tc": "tsc --noEmit --watch",
-    "lint": "oxlint .",
-    "lint:fix": "oxlint . --fix"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.52.11",
-    "@types/bun": "^1.2.21",
     "@types/node": "^24.3.0",
+    "@typescript/typescript6": "^6.0.2",
     "eslint-plugin-check-file": "^3.3.0",
     "eslint-plugin-oxfmt": "^0.25.0",
     "husky": "^9.1.7",
@@ -27,8 +25,9 @@
     "oxlint": "^1.86.0",
     "oxlint-tsgolint": "^7.0.2003",
     "tsx": "^4.20.5",
-    "typescript": "^5.9.2",
+    "typescript": "^7.0.2",
     "unplugin-dts": "^1.0.0-beta.6",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "vitest": "^5.0.5"
   }
 }

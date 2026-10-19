@@ -5,8 +5,6 @@
   "scripts": {
     "lint": "oxlint .",
     "lint:fix": "oxlint . --fix",
-    "typecheck": "tsc --noEmit",
-    "typecheck:watch": "tsc --noEmit --watch",
     "exports": "tsx ./write-exports.ts",
     "build": "tsdown --config ./tsdown.config.ts",
     "dev": "concurrently --names \"R,T\" --prefix-colors \"blue.dim,magenta.dim\" \"tsdown --config ./tsdown.config.ts --watch\" \"tsc --noEmit --watch\"",
@@ -41,6 +39,6 @@
     "tsdown": "^0",
     "tslib": "^2",
     "tsx": "^4",
-    "typescript": "^5"
+    "typescript": "^7"
   }
 }
