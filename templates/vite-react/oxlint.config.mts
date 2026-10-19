@@ -9,7 +9,7 @@ export default defineConfig({
     'eslint-plugin-oxfmt',
   ],
   categories: { correctness: 'error' },
-  options: { typeAware: true },
+  options: { typeAware: true, typeCheck: true },
   ignorePatterns: ['*.config.{js,ts,mjs,mts}'],
   settings: {
     react: { version: '19' },

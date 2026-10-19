@@ -4,7 +4,7 @@ export default defineConfig({
   plugins: ['typescript', 'import'],
   jsPlugins: ['eslint-plugin-check-file', 'eslint-plugin-oxfmt'],
   categories: { correctness: 'error' },
-  options: { typeAware: true },
+  options: { typeAware: true, typeCheck: true },
   ignorePatterns: ['/*.{js,mjs,ts,mts}', '**/node_modules', '**/dist'],
   rules: {
     'constructor-super': 'off',
