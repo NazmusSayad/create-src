@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "oxlint .",
     "lint:fix": "oxlint . --fix",
-    "test": "bun test",
+    "test": "vitest run",
     "dev": "vite",
     "preview": "vite preview",
     "build": "vite build --config vite.build.js",
@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.52.11",
-    "@types/bun": "^1.2.21",
     "@types/node": "^24.3.0",
     "eslint-plugin-check-file": "^3.3.0",
     "eslint-plugin-oxfmt": "^0.25.0",
@@ -27,6 +26,7 @@
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "unplugin-dts": "^1.0.0-beta.6",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "vitest": "^5.0.5"
   }
 }

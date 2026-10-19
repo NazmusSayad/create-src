@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "oxlint ./src",
     "lint:fix": "oxlint ./src --fix",
-    "test": "bun test",
+    "test": "vitest run",
     "prepare": "husky",
     "dev": "tsc --watch",
     "build": "npm run lint && tsc",
@@ -41,6 +41,7 @@
     "oxlint": "^1.86.0",
     "oxlint-tsgolint": "^7.0.2003",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
   }
 }
